@@ -1,7 +1,7 @@
 //***********************************************************************************
 //  LinkedList.cpp
 //
-//  Created by Shad on March 31, 2017.
+//  Created by Shadab on March 31, 2017.
 //  This source file contains the LinkedList implementation.
 //***********************************************************************************
 

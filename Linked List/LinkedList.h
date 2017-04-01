@@ -1,8 +1,7 @@
 //***********************************************************************************
 //  LinkedList.h
-//  LinkedList_Project
 //
-//  Created by Karlina Beringer on June 12, 2014.
+//  Created by Shadab on March 31, 2017.
 //  This header file contains the LinkedList class declarations.
 //***********************************************************************************
 
