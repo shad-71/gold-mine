@@ -52,6 +52,9 @@ public:
     // starting at the head and ending at the tail.
     // Prints list data to the console.
     void printList();
+
+    //Insert new node at the beginning of LinkedList
+    bool push( node * newNode);
     
     // Destructor de-allocates memory used by the list.
     ~LinkedList();

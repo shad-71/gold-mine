@@ -131,6 +131,18 @@ void LinkedList::printList()
     }
 }
 
+ //Insert new node at the beginning of LinkedList
+ bool LinkedList::push( node * newNode)
+ {
+     newNode -> next = head;
+     head = newNode;
+     listLength++;
+     cout << "New Item pushed \n";
+     return true;
+
+ }
+
+
 // Destructor de-allocates memory used by the list.
 LinkedList::~LinkedList()
 {

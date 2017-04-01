@@ -34,6 +34,11 @@ int main()
     node * F = new node;
     F -> song = "The Moth";
     F -> artist = "Aimee Mann";
+
+
+    node * G = new node;
+    G -> song = "Cheap Thrills";
+    G -> artist = "Sia";
     
     // STEP 2: Build a list of three song nodes by appending to end of list.
     LinkedList myList;
@@ -62,6 +67,14 @@ int main()
     // STEP 7: Remove a node from the middle of the list.
     myList.removeNode(3);
     myList.printList();
+
+    // STEP 8: Push a node.
+    cout<<"\n ---- STEP 8 ---- \n";
+    myList.push(G);
+    myList.printList();
+
+    
+ 
     
     return 0;
 }
