@@ -1,3 +1,6 @@
 #VS Debug files
 launch.json
 tasks.json
+
+#python compiles
+*.pyc

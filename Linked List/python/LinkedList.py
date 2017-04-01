@@ -4,15 +4,25 @@ class Node(object):
         self.next= _next
 
 class LinkedList (object):
+    head = Node(None)
     def __init__( self ):
-        head = Node(None)
+        head = None
     
     def push(self, key):
         node = Node(key)
-        if self.head.data is None:
-            head = node
-        else:
-            node.next = head
-            head = node
+        node.next = self.head
+        head = node
+    
+    def __str__(self):
+        temp = self.head
+        output = ""
+        while temp:
+            output = str(temp.data) + "->"
+            temp = temp.next
+        return output
+
+
+
+
 
 
