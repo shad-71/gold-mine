@@ -13,7 +13,8 @@ class Node(object):
         self.next_node = new_next
 
 
-class LinkedList (object):
+class LinkedList(object):
+    """LinkedList Implementation."""
     def __init__( self, head=None):
         self.head = head
     
@@ -27,9 +28,23 @@ class LinkedList (object):
         output = ""
         while temp:
             output = output + str(temp.get_data()) + "->"
+            temp = temp.get_next()        
+        return output[:-2]
+    
+    def push_sorted(self, key):
+        node = Node(key)
+        temp = self.head
+        while temp.get_data() < node.get_data():
+            current = temp
             temp = temp.get_next()
         
-        return output[:-2]
+        _next = current.get_next()
+        current.set_next(node)
+        node.set_next(_next)
+    
+
+
+
 
 
 

@@ -35,7 +35,6 @@ int main()
     F -> song = "The Moth";
     F -> artist = "Aimee Mann";
 
-
     node * G = new node;
     G -> song = "Cheap Thrills";
     G -> artist = "Sia";
@@ -72,9 +71,6 @@ int main()
     cout<<"\n ---- STEP 8 ---- \n";
     myList.push(G);
     myList.printList();
-
-    
- 
     
     return 0;
 }
