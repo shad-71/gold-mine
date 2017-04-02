@@ -23,13 +23,17 @@ class LinkedList(object):
         node.set_next(self.head)
         self.head = node
     
-    def __str__(self):
-        temp = self.head
-        output = ""
-        while temp:
-            output = output + str(temp.get_data()) + "->"
-            temp = temp.get_next()        
-        return output[:-2]
+    def __str__(self, direction=None):
+        if direction == "reverse":
+            output = ""
+            self.print_reverse(self.head, output)
+        else:
+            temp = self.head
+            output = ""
+            while temp:
+                output = output + str(temp.get_data()) + "->"
+                temp = temp.get_next()        
+            return output[:-2]
     
     def push_sorted(self, key):
         node = Node(key)
@@ -54,6 +58,13 @@ class LinkedList(object):
             current = next
         
         self.head = previous
+
+    def print_reverse(self,node ,output):
+        if node:
+            self.print_reverse(node.get_next(),output)
+            output = output + str(self.head.get_data()) + "->"
+        else :
+           return output
 
 
     

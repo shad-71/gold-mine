@@ -11,7 +11,8 @@ def main():
     ll.reverse()
     print ll
     ll.reverse()
-    print ll
+    print(ll,"reverse")
+    
 
 if __name__ == "__main__":
     main()
