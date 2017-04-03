@@ -66,6 +66,28 @@ class LinkedList(object):
         else :
            return output
 
+    def SortedMerge(self,A, B):
+        result = LinkedList()
+        if A.head == None:
+            return B
+        elif B.head == None:
+            return A
+        
+        if(A.head.get_data() > B.head.get_data()):
+            result.head.data = B.head.get_data()
+            B.head.set_next(B.head.get_next())
+            result.head.set_next(SortedMerge(self, A, B).head)
+        else:
+            result.head.data = A.head.get_data()
+            A.head.set_next(A.head.get_next())
+            result.head.set_next(SortedMerge(self, A, B).head)
+        
+        return result
+
+
+
+
+
 
     
 
