@@ -73,11 +73,6 @@ class LinkedList(object):
 
 class LinkedList_Util(object):
     """LinkedList Util functions Implementation."""
-    def __init__(self):
-        self.result = LinkedList()
-    
-    def gResult(self):
-        return self.result
 
     @staticmethod
     def SortedMerge(A, B):
@@ -87,7 +82,6 @@ class LinkedList_Util(object):
         elif B.head is None:
             return A
         if A.head.get_data() > B.head.get_data():
-            #.gResult.push()
             result.push(B.head.get_data())
             B.head = B.head.get_next()
             result.head.set_next(LinkedList_Util.SortedMerge(A, B).head)
