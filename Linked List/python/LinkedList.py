@@ -50,7 +50,7 @@ class LinkedList(object):
         current.set_next(node)
         node.set_next(_next)
 
-    def reverse(self):
+    def reverse1(self):
         current = self.head
         next = None
         previous = None
@@ -69,6 +69,25 @@ class LinkedList(object):
             output = output + str(self.head.get_data()) + "->"
         else:
             return output
+
+    def reverse(self, k, _next=None):
+        if _next:
+            current = _next
+        else:
+            current = self.head
+        #_next = None
+        previous = None
+        count = k
+        while current and  count > 0:
+            _next = current.get_next()
+            current.set_next(previous)
+            previous = current
+            current = _next
+            count -= 1
+        if _next:
+            self.head.set_next(self.reverse(k, _next))
+        
+        return previous
 
 
 class LinkedList_Util(object):

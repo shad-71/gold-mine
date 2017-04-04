@@ -10,9 +10,9 @@ def main():
     print ll
     ll.push_sorted(8)
     print ll
-    ll.reverse()
+    ll.head = ll.reverse(2)
     print ll
-    ll.reverse()
+    #ll = ll.reverse(3)
     # print(ll,"reverse")
     _ll = LinkedList()
     _ll.push(6)
