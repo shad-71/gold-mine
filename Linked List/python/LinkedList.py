@@ -50,7 +50,7 @@ class LinkedList(object):
         current.set_next(node)
         node.set_next(_next)
 
-    def reverse1(self):
+    def reverse_iterative(self):
         current = self.head
         next = None
         previous = None
@@ -86,8 +86,45 @@ class LinkedList(object):
             count -= 1
         if _next:
             self.head.set_next(self.reverse(k, _next))
-        
+
         return previous
+
+    def breaker(self, ll):
+        slow = ll.head
+        if slow.get_next():
+            fast = slow.get_next()
+
+        while fast:
+            fast = fast.get_next()
+            if fast :
+                slow = slow.get_next()
+                fast = fast.get_next()
+
+        middle = LinkedList()
+        middle.head = slow.get_next()
+        slow.set_next(None)
+
+        return ll, middle  
+
+    def Merge(self, start, middle):
+        result = LinkedList()
+        result = start
+        merger = start.head
+        while merger.get_next():
+            merger = merger.get_next()
+        merger.set_next(middle.head)
+        return result
+
+    def MergeSort(self, ll):
+        _ll = ll
+        if ll is None or ll.head.get_next() is None :
+            return ll
+
+        start, middle = self.breaker(_ll)
+        start = self.MergeSort(start)
+        middle = self.MergeSort(middle)
+        return LinkedList_Util.SortedMerge(start, middle)
+
 
 
 class LinkedList_Util(object):
@@ -110,3 +147,5 @@ class LinkedList_Util(object):
             result.head.set_next(LinkedList_Util.SortedMerge(A, B).head)
 
         return result
+
+

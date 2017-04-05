@@ -10,10 +10,8 @@ def main():
     print ll
     ll.push_sorted(8)
     print ll
-    ll.head = ll.reverse(2)
+    ll.head = ll.reverse(5)
     print ll
-    #ll = ll.reverse(3)
-    # print(ll,"reverse")
     _ll = LinkedList()
     _ll.push(6)
     _ll.push(2)
@@ -21,6 +19,8 @@ def main():
     print _ll
     ll_3 = LinkedList()
     ll_3 = LinkedList_Util.SortedMerge(ll, _ll)
+    print ll
+    ll_3 = ll_3.MergeSort(ll)
     print ll_3
 
 
