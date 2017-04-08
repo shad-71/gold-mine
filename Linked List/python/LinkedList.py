@@ -19,10 +19,7 @@ class Node(object):
 class LinkedList(object):
     """LinkedList Implementation."""
 
-    def __init__(self, head=None):
-        self.head = head
-
-    def BulkAdd(self, _head, *argv):
+    def __init__(self, _head=None, *argv):
         self.head = Node(_head)
         for arg in argv:
             self.push(arg)

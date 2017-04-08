@@ -3,8 +3,8 @@ from LinkedList import LinkedList_Util
 
 
 def main():
-    ll = LinkedList()
-    ll.BulkAdd(1,2,3,4,5)
+    ll = LinkedList(1,2,3,4)
+    #ll.BulkAdd(1,2,3,4,5)
     ll.push(10)
     ll.push(7)
     ll.push(5)
@@ -13,12 +13,12 @@ def main():
     print ll
     ll.head = ll.reverse(5)
     print ll
-    _ll = LinkedList()
+    _ll = LinkedList(1)
     _ll.push(6)
     _ll.push(2)
     _ll.push(1)
     print _ll
-    ll_3 = LinkedList()
+    ll_3 = LinkedList(4)
     ll_3 = LinkedList_Util.SortedMerge(ll, _ll)
     print ll
     ll_3 = ll_3.MergeSort(ll)
