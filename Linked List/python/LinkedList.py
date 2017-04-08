@@ -22,6 +22,11 @@ class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
 
+    def BulkAdd(self, _head, *argv):
+        self.head = Node(_head)
+        for arg in argv:
+            self.push(arg)
+
     def push(self, key):
         node = Node(key)
         node.set_next(self.head)
@@ -147,5 +152,7 @@ class LinkedList_Util(object):
             result.head.set_next(LinkedList_Util.SortedMerge(A, B).head)
 
         return result
+    
+    
 
 

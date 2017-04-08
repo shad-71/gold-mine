@@ -4,6 +4,7 @@ from LinkedList import LinkedList_Util
 
 def main():
     ll = LinkedList()
+    ll.BulkAdd(1,2,3,4,5)
     ll.push(10)
     ll.push(7)
     ll.push(5)
