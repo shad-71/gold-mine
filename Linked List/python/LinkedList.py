@@ -44,7 +44,7 @@ class LinkedList(object):
     def push_sorted(self, key):
         node = Node(key)
         temp = self.head
-        while temp.get_data() < node.get_data():
+        while temp and temp.get_data() < node.get_data():
             current = temp
             temp = temp.get_next()
 
