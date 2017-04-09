@@ -12,6 +12,7 @@ def main():
     _ll = LinkedList(1, 2, 3, 4, 5)
     #loop list
     _ll.head.next.next.next.next.set_next(_ll.head.get_next())
+    _ll.DetectandRemoveLoop()
     print _ll
     ll_3 = LinkedList(4)
     ll_3 = LinkedList_Util.SortedMerge(ll, _ll)

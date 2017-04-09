@@ -127,6 +127,23 @@ class LinkedList(object):
         middle = self.MergeSort(middle)
         return LinkedList_Util.SortedMerge(start, middle)
 
+    def DetectandRemoveLoop(self):
+        slow = self.head
+        fast = slow.get_next()
+        while fast.get_data() != slow.get_data():
+            fast = fast.get_next()
+            if fast:
+                slow = slow.get_next()
+                fast = fast.get_next()
+        slow = self.head
+        while fast.get_data() != slow.get_data():
+            fast = fast.get_next()
+            if fast:
+                loopNode = fast
+                slow = slow.get_next()
+                fast = fast.get_next()
+ #culprit node is set none to break the loop       
+        loopNode.set_next(None)
 
 
 class LinkedList_Util(object):
