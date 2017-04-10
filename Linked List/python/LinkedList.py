@@ -144,6 +144,14 @@ class LinkedList(object):
                 fast = fast.get_next()
  #culprit node is set none to break the loop       
         loopNode.set_next(None)
+    
+    def __len__(self):
+        node = self.head
+        length = 0
+        while node:
+            length+=1
+            node = node.get_next()
+        return length
 
 
 class LinkedList_Util(object):
@@ -166,7 +174,13 @@ class LinkedList_Util(object):
             result.head.set_next(LinkedList_Util.SortedMerge(A, B).head)
 
         return result
-    
-    
+
+    def Add(A, B):
+        if(len(A) > len(B)):
+            loop = len(A) - len(B)
+            while loop :
+                
+
+
 
 
