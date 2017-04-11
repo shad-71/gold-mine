@@ -174,12 +174,55 @@ class LinkedList_Util(object):
             result.head.set_next(LinkedList_Util.SortedMerge(A, B).head)
 
         return result
-
+    @staticmethod
     def Add(A, B):
-        if(len(A) > len(B)):
+        result = LinkedList()
+        carry = 0
+        if len(A) > len(B):
             loop = len(A) - len(B)
-            while loop :
+            while loop:
+                result.push(A.head.get_data())
+                A.head = A.head.get_next()
+                loop += 1
+            loop = len(B)
+            carry_list = LinkedList()
+            
+            return LinkedList_Util.Add(A, B)
+        elif len(A) < len(B):
+             loop = len(B) - len(A)
+             while loop:
+                result.push(B.head.get_data())
+                A.head = B.head.get_next()
+                loop += 1
+             return LinkedList_Util.Add(A, B)
+        else :
+            if A.head.get_next():
+                LinkedList_Util.Add(A.head.get_next(), B.head.get_next())
+            else:
+                temp = A.head.get_data() + B.head.get_data()
+                if temp > 9:
+                    if carry > 0:
+                        result.push((temp%10)+1)
+                        carry = 1
+                    else:
+                        result.push(temp%10)
+                        carry = 1
+                else:
+                    if carry > 0:
+                        if temp + carry > 9:
+                            result.push((temp%10)+1)
+                            carry = 1
+                        else:
+                            result.push(temp+1)
+                            carry = 0
+                    else:
+                        result.push(temp)
+                        carry = 0
+        return result
+                    
                 
+
+
 
 
 
