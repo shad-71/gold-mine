@@ -1,8 +1,14 @@
 from LinkedList import LinkedList
 from LinkedList import LinkedList_Util
 
+def test_1():
+        ll = LinkedList(1, 2, 3, 4)
+        _ll = LinkedList(1,2,3,4)
+        result = LinkedList_Util.Add(ll,_ll)
 
 def main():
+   
+ 
     ll = LinkedList(1, 2, 3, 4)
     print ll
     ll.push_sorted(8)
@@ -23,4 +29,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_1()

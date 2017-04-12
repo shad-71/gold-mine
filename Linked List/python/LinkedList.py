@@ -183,11 +183,10 @@ class LinkedList_Util(object):
             while loop:
                 result.push(A.head.get_data())
                 A.head = A.head.get_next()
-                loop += 1
-            loop = len(B)
-            carry_list = LinkedList()
-            
-            return LinkedList_Util.Add(A, B)
+                loop += 1          
+            result_temp = LinkedList_Util.Add(A, B)
+            if carry:
+                
         elif len(A) < len(B):
              loop = len(B) - len(A)
              while loop:
@@ -219,7 +218,12 @@ class LinkedList_Util(object):
                         result.push(temp)
                         carry = 0
         return result
-                    
+    
+    @staticmethod
+    def AddNumbers(A, B):
+        result = LinkedList()
+        carry = 0
+        
                 
 
 
