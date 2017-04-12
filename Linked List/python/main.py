@@ -4,10 +4,10 @@ from LinkedList import LinkedList_Util
 def test_1():
         ll = LinkedList(1, 2, 3, 4)
         _ll = LinkedList(1,2,3,4)
-        result = LinkedList_Util.Add(ll,_ll)
+        result = LinkedList_Util.AddNumbers(ll, _ll)
+        print result
 
 def main():
-   
  
     ll = LinkedList(1, 2, 3, 4)
     print ll

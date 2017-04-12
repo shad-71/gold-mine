@@ -184,19 +184,24 @@ class LinkedList_Util(object):
                 result.push(A.head.get_data())
                 A.head = A.head.get_next()
                 loop += 1          
-            result_temp = LinkedList_Util.Add(A, B)
+            result.head.set_next(LinkedList_Util.Add(A, B).head)
             if carry:
-                
+                LinkedList_Util.Add(result, LinkedList(1))
+
         elif len(A) < len(B):
              loop = len(B) - len(A)
              while loop:
                 result.push(B.head.get_data())
                 A.head = B.head.get_next()
                 loop += 1
-             return LinkedList_Util.Add(A, B)
+             result.head.set_next(LinkedList_Util.Add(A, B).head)
+             if carry:
+                LinkedList_Util.Add(result, LinkedList(1))
         else :
             if A.head.get_next():
-                LinkedList_Util.Add(A.head.get_next(), B.head.get_next())
+                A.head = A.head.get_next()
+                B.head = B.head.get_next()
+                result.head.set_next(LinkedList_Util.Add(A, B).head)
             else:
                 temp = A.head.get_data() + B.head.get_data()
                 if temp > 9:
@@ -217,15 +222,61 @@ class LinkedList_Util(object):
                     else:
                         result.push(temp)
                         carry = 0
+                
         return result
-    
+
     @staticmethod
-    def AddNumbers(A, B):
+    def AddNumbers( A, B):
         result = LinkedList()
         carry = 0
+        if not B :
+            return A
         
-                
+        if not A :
+            return B
 
+        if len(A) < len(B):
+            while A:
+                temp = A.head.get_data() + B.head.get_data() + carry
+                if temp > 9:
+                    result.push(temp%10)
+                    carry = 1
+                else :
+                    result.push(temp)    
+                    carry = 0
+                A.head = A.head.get_next()
+                B.head = B.head.get_next()
+            while B:
+                temp = B.head.get_data() + carry
+                if temp > 9:
+                    result.push(temp%10)
+                    carry = 1
+                else :
+                    result.push(temp)
+                    carry = 0
+                B.head = B.head.get_next()
+        else :
+            while B:
+                temp = A.head.get_data() + B.head.get_data() + carry
+                if temp > 9:
+                    result.push(temp%10)
+                    carry = 1
+                else :
+                    result.push(temp)    
+                    carry = 0
+                A.head = A.head.get_next()
+                B.head = B.head.get_next()
+            while A:
+                temp = A.head.get_data() + carry
+                if temp > 9:
+                    result.push(temp%10)
+                    carry = 1
+                else :
+                    result.push(temp)
+                    carry = 0
+                A.head = A.head.get_next() 
+        
+        return result
 
 
 
