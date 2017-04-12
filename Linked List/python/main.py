@@ -7,6 +7,11 @@ def test_1():
         result = LinkedList_Util.AddNumbers(ll, _ll)
         print result
 
+def play():
+    ll = LinkedList()
+    ll.push(1)
+    print ll
+
 def main():
  
     ll = LinkedList(1, 2, 3, 4)
@@ -30,3 +35,4 @@ def main():
 
 if __name__ == "__main__":
     test_1()
+    play()

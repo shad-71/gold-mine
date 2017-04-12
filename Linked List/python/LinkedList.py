@@ -20,7 +20,10 @@ class LinkedList(object):
     """LinkedList Implementation."""
 
     def __init__(self, _head=None, *argv):
-        self.head = Node(_head)
+        if _head:
+            self.head = Node(_head)
+        else:
+            self.head = None    
         for arg in argv:
             self.push(arg)
 
