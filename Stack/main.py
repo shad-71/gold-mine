@@ -1,6 +1,6 @@
 from stack import stack
 
-def main():
+def structure_test():
     _stack = stack()
     _stack.push(2)
     _stack.push(3)
@@ -11,4 +11,4 @@ def main():
     print ("not empty", "empty")[_stack.isEmpty()]
 
 if __name__ == "__main__":
-    main()
+    structure_test()
