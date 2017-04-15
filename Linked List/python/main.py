@@ -7,10 +7,16 @@ def test_1():
     result = LinkedList_Util.AddNumbers(ll, _ll)
     print result
 
-def play():
+def AddOne_test():
     ll = LinkedList(9, 9, 1, 9, 1)
     print ll
     ll.AddOne()
+    print ll
+    list = LinkedList(9, 9, 9)
+    print list
+    list.AddOne()
+    print list
+
 
 def main():
 
@@ -35,4 +41,5 @@ def main():
 
 if __name__ == "__main__":
     #test_1()
-    play()
+    AddOne_test()
+

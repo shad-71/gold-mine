@@ -178,7 +178,54 @@ class LinkedList(object):
         length = len(self)
         list = self
         count = list.countNine()
-        print count
+        if count > 0 :
+            if length == count:
+                node = LinkedList()
+                node.head = self.head
+                node.makeZeros()
+                self.push(1)
+            else :    
+                node = self.K_nodeFromLast(count,length)
+                node.head.data += 1
+                node.head = node.head.get_next() 
+                node.makeZeros()
+        else:
+            self.AddOneToLast()
+    
+    def makeZeros(self):
+        while self.head:
+            self.head.set_data(0)
+            self.head = self.head.get_next()
+    
+    def K_nodeFromLast(self, count, length):
+        k = length - count - 1
+        list = LinkedList()
+        list.head = self.head
+        while k > 0:
+            list.head = list.head.get_next()
+            k -= 1
+        
+        return list
+    
+    def AddOneToLast(self):
+        list = LinkedList()
+        list.head = self.head
+        while list.head.get_next():
+            list.head = list.head.get_next()
+        
+        list.head.data += 1
+
+
+            
+
+
+        
+
+        
+
+
+
+
             
 
 
