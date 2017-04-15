@@ -12,3 +12,4 @@ def structure_test():
 
 if __name__ == "__main__":
     structure_test()
+    

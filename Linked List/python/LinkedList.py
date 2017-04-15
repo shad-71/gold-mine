@@ -212,26 +212,8 @@ class LinkedList(object):
         list.head = self.head
         while list.head.get_next():
             list.head = list.head.get_next()
-        
+
         list.head.data += 1
-
-
-            
-
-
-        
-
-        
-
-
-
-
-            
-
-
-
-
-
 
 class LinkedList_Util(object):
     """LinkedList Util functions Implementation."""

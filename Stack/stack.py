@@ -5,7 +5,7 @@
 from sys import maxsize
 
 class stack:
-    """Stack structure """
+    """Stack structure"""
     def __init__(self):
         self.stack = []
 
