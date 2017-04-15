@@ -2,18 +2,18 @@ from LinkedList import LinkedList
 from LinkedList import LinkedList_Util
 
 def test_1():
-        ll = LinkedList(1, 2, 3, 4)
-        _ll = LinkedList(1,2,3,4)
-        result = LinkedList_Util.AddNumbers(ll, _ll)
-        print result
+    ll = LinkedList(1, 2, 3, 4)
+    _ll = LinkedList(1, 2, 3, 4)
+    result = LinkedList_Util.AddNumbers(ll, _ll)
+    print result
 
 def play():
-    ll = LinkedList()
-    ll.push(1)
+    ll = LinkedList(9, 9, 1, 9, 1)
     print ll
+    ll.AddOne()
 
 def main():
- 
+
     ll = LinkedList(1, 2, 3, 4)
     print ll
     ll.push_sorted(8)
@@ -34,5 +34,5 @@ def main():
 
 
 if __name__ == "__main__":
-    test_1()
+    #test_1()
     play()

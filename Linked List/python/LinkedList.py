@@ -145,16 +145,45 @@ class LinkedList(object):
                 loopNode = fast
                 slow = slow.get_next()
                 fast = fast.get_next()
- #culprit node is set none to break the loop       
+        #culprit node is set none to break the loop       
         loopNode.set_next(None)
-    
+
     def __len__(self):
         node = self.head
         length = 0
         while node:
-            length+=1
+            length += 1
             node = node.get_next()
         return length
+
+    def countNine(self):
+        nine = 0
+        if self.head.get_next():
+            temp = self.head
+            list = LinkedList()
+            list.head = temp
+            list.head = list.head.get_next()
+            nine = list.countNine()
+
+        if self.head.get_data() == 9:
+            if self.head.get_next():
+                temp = self.head.get_next()
+                if temp.get_data() == 9:
+                    nine += 1
+            else:
+                nine += 1
+        return nine
+
+    def AddOne(self):
+        length = len(self)
+        list = self
+        count = list.countNine()
+        print count
+            
+
+
+
+
 
 
 class LinkedList_Util(object):
@@ -177,6 +206,7 @@ class LinkedList_Util(object):
             result.head.set_next(LinkedList_Util.SortedMerge(A, B).head)
 
         return result
+
     @staticmethod
     def Add(A, B):
         result = LinkedList()
