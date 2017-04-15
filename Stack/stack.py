@@ -29,5 +29,9 @@ class stack:
         for element in self.stack:
             output = output + str(element) + "->"
         return output[:-2]
+    
+    def peek(self):
+        """returns element on top of stack"""
+        return self.stack[-1]
 
 
