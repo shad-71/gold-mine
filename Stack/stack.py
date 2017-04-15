@@ -16,7 +16,7 @@ class stack:
     def pop(self):
         """pop the element on top"""
         if not self.isEmpty():
-            self.stack.pop()
+            return self.stack.pop()
         else:
             pass
 
