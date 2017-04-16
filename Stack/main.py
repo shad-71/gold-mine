@@ -1,5 +1,5 @@
 from stack import stack
-from InfixToPostfix import InfixToPostfix
+from Stack_Utils import *
 
 def structure_test():
     _stack = stack()
@@ -13,8 +13,11 @@ def structure_test():
     print ("not empty", "empty")[_stack.isEmpty()]
 
 def i2p_test():
-    exp = "a+b*(c^d-e)^(f+g*h)-i"
-    InfixToPostfix(exp)
+    exp_i2p = "a+b*(c^d-e)^(f+g*h)-i"
+    exp = "2+3*1-9"
+    postfix_exp = InfixToPostfix(exp)
+    print postfix_exp
+    Eval_Postfix(postfix_exp)
 
 
 if __name__ == "__main__":

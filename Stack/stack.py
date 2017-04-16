@@ -1,9 +1,3 @@
-# Python program for implementation of stack
- 
-# import maxsize from sys module 
-# Used to return -infinite when stack is empty
-from sys import maxsize
-
 class stack:
     """Stack structure"""
     def __init__(self):
@@ -29,7 +23,7 @@ class stack:
         for element in self.stack:
             output = output + str(element) + "->"
         return output[:-2]
-    
+
     def peek(self):
         """returns element on top of stack"""
         return self.stack[-1]
