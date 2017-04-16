@@ -37,8 +37,6 @@ def main():
     ll_3 = ll_3.MergeSort(ll)
     print ll_3
 
-
-
 if __name__ == "__main__":
     #test_1()
     AddOne_test()

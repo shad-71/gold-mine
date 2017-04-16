@@ -26,6 +26,7 @@ def InfixToPostfix(exp):
     return "".join(output)
 
 def Eval_Postfix(exp):
+    """Function to evaluate the postfix expression"""
     _stack = stack()
     for i in exp:
         if i.isdigit():
