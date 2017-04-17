@@ -19,7 +19,12 @@ def i2p_test():
     print postfix_exp
     Eval_Postfix(postfix_exp)
 
+def paranthesis_test():
+    exp = "{()}[]"
+    print ("paranthesis are not balanced", " paranthesis are balanced")[check_parenthesis(exp)]
+
 if __name__ == "__main__":
     #structure_test()
-    i2p_test()
+    #i2p_test()
+    paranthesis_test()
     

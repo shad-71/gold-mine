@@ -37,9 +37,24 @@ def Eval_Postfix(exp):
             _stack.push(str(eval(x + i + y)))
     print _stack.peek() 
 
+def check_parenthesis(exp):
+    """Check for paranthesis in a expression"""
+    opening_parenthesis = "({["
+    closing_parenthesis = ")}]"
+    _stack = stack()
+    for i in exp:
+        if opening_parenthesis.find(i) > -1:
+            _stack.push(i)
+        if closing_parenthesis.find(i) > -1:
+            if _stack.peek() == opening_parenthesis[closing_parenthesis.find(i)]:
+                _stack.pop()
+            else:
+                return False
+    if _stack.isEmpty():
+        return True
+    else:
+        return False
 
-
-    
 
 
 
