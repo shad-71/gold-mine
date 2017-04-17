@@ -1,5 +1,5 @@
-from stack import stack
 from Stack_Utils import *
+from stack import stack
 
 def structure_test():
     _stack = stack()
@@ -23,8 +23,14 @@ def paranthesis_test():
     exp = "{()}[]"
     print ("paranthesis are not balanced", " paranthesis are balanced")[check_parenthesis(exp)]
 
+def nge_test():
+    ar = [4, 5, 2, 25]
+    next_greater(ar)
+
+
 if __name__ == "__main__":
     #structure_test()
     #i2p_test()
-    paranthesis_test()
+    #paranthesis_test()
+    nge_test()
     

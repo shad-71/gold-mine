@@ -1,4 +1,6 @@
+from __future__ import print_function
 from stack import stack
+
 
 def InfixToPostfix(exp):
     """Method for infix to postfix conversrion"""
@@ -35,7 +37,7 @@ def Eval_Postfix(exp):
             y = _stack.pop()
             x = _stack.pop()
             _stack.push(str(eval(x + i + y)))
-    print _stack.peek() 
+    print (_stack.peek())
 
 def check_parenthesis(exp):
     """Check for paranthesis in a expression"""
@@ -54,6 +56,21 @@ def check_parenthesis(exp):
         return True
     else:
         return False
+
+def next_greater(array):
+    """Finds next greater element for complete array"""
+    _stack = stack()
+    _stack.push(array[0])
+    for i in array[1:]:
+        if i > _stack.peek():
+            _stack.push(i)
+        else:
+            _stack.push(_stack.peek())
+        print (_stack.peek(), end = ' ')
+    print ("-1")
+
+
+
 
 
 
