@@ -66,7 +66,7 @@ def next_greater(array):
             _stack.push(i)
         else:
             _stack.push(_stack.peek())
-        print (_stack.peek(), end = ' ')
+        print(_stack.peek(), end =' ')
     print ("-1")
 
 

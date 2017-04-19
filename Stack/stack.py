@@ -26,6 +26,7 @@ class stack:
 
     def peek(self):
         """returns element on top of stack"""
-        return self.stack[-1]
+        if not self.isEmpty():
+            return self.stack[-1]
 
 
