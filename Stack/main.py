@@ -1,5 +1,6 @@
 from Stack_Utils import *
 from stack import stack
+from stock import *
 
 def structure_test():
     _stack = stack()
@@ -27,10 +28,14 @@ def nge_test():
     ar = [4, 5, 2, 25]
     next_greater(ar)
 
+def StockSpan_problem():
+    prices = [10, 4, 5, 90, 120, 80, 90]
+    StockSpan(prices)
 
 if __name__ == "__main__":
     #structure_test()
     #i2p_test()
     #paranthesis_test()
-    nge_test()
+    #nge_test()
+    StockSpan_problem()
     
