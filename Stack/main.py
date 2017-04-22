@@ -34,7 +34,7 @@ def StockSpan_problem():
     StockSpan(prices)
 
 def TowerOfHanoi_problem():
-    TowerOfHanoi(4)
+    TowerOfHanoi(1024)
 
 
 if __name__ == "__main__":
