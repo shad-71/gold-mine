@@ -36,7 +36,9 @@ def StockSpan_problem():
     StockSpan(prices)
 
 def TowerOfHanoi_problem():
-    TowerOfHanoi(100)
+    start_time = timeit.default_timer()
+    TowerOfHanoi(20)
+    print(timeit.default_timer() - start_time)
 
 
 if __name__ == "__main__":
@@ -46,4 +48,6 @@ if __name__ == "__main__":
     #nge_test()
     #StockSpan_problem()
     TowerOfHanoi_problem()
+    # print(timeit.timeit("TowerOfHanoi_problem()", setup="from __main__ import TowerOfHanoi_problem"), number = 1)
+
     
