@@ -1,6 +1,7 @@
 from Stack_Utils import *
 from stack import stack
 from stock import *
+from towerofhanoi import *
 
 def structure_test():
     _stack = stack()
@@ -32,10 +33,15 @@ def StockSpan_problem():
     prices = [10, 4, 5, 90, 120, 80, 90]
     StockSpan(prices)
 
+def TowerOfHanoi_problem():
+    TowerOfHanoi(4)
+
+
 if __name__ == "__main__":
     #structure_test()
     #i2p_test()
     #paranthesis_test()
     #nge_test()
-    StockSpan_problem()
+    #StockSpan_problem()
+    TowerOfHanoi_problem()
     
