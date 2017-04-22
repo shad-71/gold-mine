@@ -2,6 +2,8 @@ from Stack_Utils import *
 from stack import stack
 from stock import *
 from towerofhanoi import *
+import timeit
+
 
 def structure_test():
     _stack = stack()
@@ -34,7 +36,7 @@ def StockSpan_problem():
     StockSpan(prices)
 
 def TowerOfHanoi_problem():
-    TowerOfHanoi(1024)
+    TowerOfHanoi(100)
 
 
 if __name__ == "__main__":

@@ -19,13 +19,17 @@ def TowerOfHanoi(disk_count):
 
 
 def MakeLegalMoves(count, stack_A, stack_B, stack_C):
-    for i in range(1,count):
+    #for i in xrange(1,count):
+    i = 1
+    while i < count:
         if i%3 == 1:
             MoveDisk(stack_C, stack_A)
         if i%3 == 2:
             MoveDisk(stack_B, stack_A)
         if i%3 == 0:
             MoveDisk(stack_C, stack_B)
+        yield i
+        i += 1
 
 def MoveDisk(stack_X, stack_Y):
     if stack_X.isEmpty():
