@@ -6,14 +6,14 @@ def TowerOfHanoi(disk_count):
     pole_source = stack()
     pole_destination = stack()
     pole_aux = stack()
-    for i in range(0,disk_count):
+    for i in range(0, disk_count):
         pole_source.push(disk_count - i)
-    moves = pow(2,disk_count) 
+    moves = pow(2, disk_count)
     if disk_count%2 == 0:
-        MakeLegalMoves(moves,pole_source, pole_destination, pole_aux)
+        MakeLegalMoves(moves, pole_source, pole_destination, pole_aux)
     else:
-        MakeLegalMoves(moves, pole_source,pole_aux, pole_destination)
-    
+        MakeLegalMoves(moves, pole_source, pole_aux, pole_destination)
+
     # while not pole_destination.isEmpty():
     #     print pole_destination.pop()
 

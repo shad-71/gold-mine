@@ -48,6 +48,5 @@ if __name__ == "__main__":
     #nge_test()
     #StockSpan_problem()
     TowerOfHanoi_problem()
-    # print(timeit.timeit("TowerOfHanoi_problem()", setup="from __main__ import TowerOfHanoi_problem"), number = 1)
 
     
