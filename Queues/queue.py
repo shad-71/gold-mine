@@ -1,7 +1,21 @@
 class queue:
     """Queue implementation"""
     def __init__(self):
-        self.front = 0
-        self.size = 0
-        self.rear = -1
+        """default constructor"""
         self.Q = []
+    
+    def enqueue(self, item):
+        """for pushing element from rear"""
+        self.Q.append(item)
+    
+    def dequeue(self):
+        """Will return the poped elememt from the front"""
+        if not self.isEmpty():
+            return self.Q.pop(0)
+    
+    def isEmpty(self):
+        """stack util for checking size"""
+        return len(self.Q) == 0
+        
+
+
