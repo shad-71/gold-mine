@@ -12,10 +12,13 @@ def structure_test():
     Q.enqueue(22)
     Q.enqueue(32)
 
+    print Q.front()
+    print Q.rear()
     print Q.dequeue()
     print Q.dequeue()
     print Q.dequeue()
-    
+    print Q.front()
+
 
 if __name__ == "__main__":
     structure_test()
