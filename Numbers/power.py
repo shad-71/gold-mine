@@ -1,5 +1,7 @@
 # This program was wrttien to implement
 # A fast power evaluating function
+import timeit
+
 
 def power(x, y):
     """Recusrive function to evaluate power in O(log n)"""
@@ -11,7 +13,7 @@ def power(x, y):
     else:
         return x*temp*temp
 
-def pow(x, y):
+def powerI(x, y):
     """Iterative function to evaluate power in O(log n)"""
     temp = 1
     while y > 0:
@@ -25,9 +27,12 @@ def pow(x, y):
 
 
 if __name__ == "__main__":
-    print pow(2,10)
-    print pow(2,11)
-    print pow(2,12)
+    start_time = timeit.default_timer()
+    print powerI(10,100000)
+    print(timeit.default_timer() - start_time)
+    start_time = timeit.default_timer()
+    print pow(10,100000)
+    print(timeit.default_timer() - start_time)
 
 
 
