@@ -1,4 +1,4 @@
-from queue import queue
+from queue import *
 
 def structure_test():
     Q = queue()
@@ -19,6 +19,16 @@ def structure_test():
     print Q.dequeue()
     print Q.front()
 
+def Priority_Q_test():
+    PQ = PriorityQueue()
+    PQ.enqueue(31,1)
+    PQ.enqueue(11,2)
+    PQ.enqueue(91,4)
+    PQ.enqueue(51,3)
+
+    print PQ.front()
+    print PQ.rear()
 
 if __name__ == "__main__":
-    structure_test()
+    # structure_test()
+    Priority_Q_test()

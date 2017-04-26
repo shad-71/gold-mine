@@ -28,10 +28,13 @@ def powerI(x, y):
 
 if __name__ == "__main__":
     start_time = timeit.default_timer()
-    print powerI(10,100000)
+    print power(10,1000)
     print(timeit.default_timer() - start_time)
     start_time = timeit.default_timer()
-    print pow(10,100000)
+    print powerI(10,1000)
+    print(timeit.default_timer() - start_time)
+    start_time = timeit.default_timer()
+    print pow(10,1000)
     print(timeit.default_timer() - start_time)
 
 
