@@ -21,10 +21,21 @@ def structure_test():
 
 def Priority_Q_test():
     PQ = PriorityQueue()
-    PQ.enqueue(31,1)
-    PQ.enqueue(11,2)
-    PQ.enqueue(91,4)
-    PQ.enqueue(51,3)
+    PQ.enqueue(31, 1)
+    PQ.enqueue(11, 2)
+    PQ.enqueue(91, 4)
+    PQ.enqueue(51, 3)
+    PQ.enqueue(10, 9)
+    PQ.enqueue(1, 1) # handles same priority with FIFO
+    PQ.enqueue(2, 5)
+    PQ.enqueue(13, 6)
+
+
+    print PQ.front()
+    print PQ.rear()
+
+    print PQ.dequeue()
+    print PQ.dequeue()
 
     print PQ.front()
     print PQ.rear()
