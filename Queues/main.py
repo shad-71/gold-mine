@@ -66,8 +66,6 @@ def deque_test():
     print DQ.front()
     print DQ.rear()
 
-
-
 if __name__ == "__main__":
     # structure_test()
     # Priority_Q_test()

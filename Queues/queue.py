@@ -91,21 +91,25 @@ class deque:
         self.Q = []
 
     def isEmpty(self):
-        """stack util for checking size"""
+        """util for checking size"""
         return len(self.Q) == 0
 
     def insertBack(self, item):
+        """inserts element at back of queue"""
         self.Q.append(item)
 
     def deleteBack(self):
+        """deletes element from back of queue"""
         if not self.isEmpty():
             self.Q.pop()
 
     def insertFront(self, item):
+        """inserts at front of Q"""
         self.Q.insert(0, item)
 
     def deleteFront(self):
-        if self.isEmpty():
+        """delete from front"""
+        if not self.isEmpty():
             self.Q.pop(0)
 
     def front(self):
@@ -114,6 +118,7 @@ class deque:
             return self.Q[0]
 
     def rear(self):
+        """returns rear element"""
         if not self.isEmpty():
             return self.Q[-1]
 
