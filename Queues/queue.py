@@ -88,21 +88,35 @@ class deque:
 
     def __init__(self):
         """default constructor"""
-        self.Q =[]
-    
+        self.Q = []
+
     def isEmpty(self):
         """stack util for checking size"""
         return len(self.Q) == 0
-    
+
     def insertBack(self, item):
         self.Q.append(item)
-    
+
     def deleteBack(self):
         if not self.isEmpty():
-            self.Q.pop()               
+            self.Q.pop()
 
-    def insertFront(self):
-        self.Q.insert(0)
+    def insertFront(self, item):
+        self.Q.insert(0, item)
+
+    def deleteFront(self):
+        if self.isEmpty():
+            self.Q.pop(0)
+
+    def front(self):
+        """returns front element"""
+        if not self.isEmpty():
+            return self.Q[0]
+
+    def rear(self):
+        if not self.isEmpty():
+            return self.Q[-1]
+
 
 
 

@@ -40,6 +40,35 @@ def Priority_Q_test():
     print PQ.front()
     print PQ.rear()
 
+def deque_test():
+    DQ = deque()
+    DQ.insertBack(2)
+    DQ.insertFront(1)
+
+    print DQ.front()
+    print DQ.rear()
+
+    DQ.insertBack(3)
+    DQ.insertFront(4)
+    DQ.insertBack(5)
+    DQ.insertFront(6)
+    DQ.insertBack(7)
+    DQ.insertFront(8)
+
+    print DQ.front()
+    print DQ.rear()
+
+    DQ.deleteBack()
+    print DQ.front()
+    print DQ.rear()
+
+    DQ.deleteFront()
+    print DQ.front()
+    print DQ.rear()
+
+
+
 if __name__ == "__main__":
     # structure_test()
-    Priority_Q_test()
+    # Priority_Q_test()
+    deque_test()
