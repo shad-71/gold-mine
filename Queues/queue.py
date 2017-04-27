@@ -83,6 +83,29 @@ class PriorityQueue:
             self.P.pop(0)
             return self.Q.pop(0)
 
+class deque:
+    """double ended queue implementation"""
+
+    def __init__(self):
+        """default constructor"""
+        self.Q =[]
+    
+    def isEmpty(self):
+        """stack util for checking size"""
+        return len(self.Q) == 0
+    
+    def insertBack(self, item):
+        self.Q.append(item)
+    
+    def deleteBack(self):
+        if not self.isEmpty():
+            self.Q.pop()               
+
+    def insertFront(self):
+        self.Q.insert(0)
+
+
+
 
         
 
