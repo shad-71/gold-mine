@@ -1,4 +1,5 @@
 from queue import *
+from circularTour import circularTour
 
 def structure_test():
     Q = queue()
@@ -66,7 +67,22 @@ def deque_test():
     print DQ.front()
     print DQ.rear()
 
+def circularTour_problem():
+    oil = [4, 6, 7, 4]
+    distance = [6, 5, 3, 5]
+    print "start jouney from :", circularTour(distance, oil)
+    oil = [6, 6, 7, 4]
+    distance = [6, 5, 3, 5]
+    print "start jouney from :", circularTour(distance, oil)
+    distance = [4, 6, 3]
+    oil = [6, 3, 7]
+    print "start jouney from :", circularTour(distance, oil)
+
+
 if __name__ == "__main__":
     # structure_test()
     # Priority_Q_test()
-    deque_test()
+    # deque_test()
+    circularTour_problem()
+
+

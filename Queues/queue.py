@@ -26,6 +26,10 @@ class queue:
         if not self.isEmpty():
             return self.Q[-1]
 
+    def __len__(self):
+        return len(self.Q)
+
+
 class PriorityQueue:
     """Priority Queue implementation"""
     def __init__(self):
