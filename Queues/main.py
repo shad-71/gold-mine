@@ -1,5 +1,6 @@
 from queue import *
 from circularTour import circularTour
+from slidingwindow import maxinwindow
 
 def structure_test():
     Q = queue()
@@ -78,11 +79,16 @@ def circularTour_problem():
     oil = [6, 3, 7]
     print "start jouney from :", circularTour(distance, oil)
 
+def slidingwindow_problem():
+    arr = [1, 2, 3, 1, 4, 5, 2]
+    maxinwindow(arr, 3)
+
 
 if __name__ == "__main__":
     # structure_test()
     # Priority_Q_test()
     # deque_test()
-    circularTour_problem()
+    # circularTour_problem()
+    slidingwindow_problem()
 
 
