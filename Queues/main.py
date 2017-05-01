@@ -1,6 +1,8 @@
 from queue import *
 from circularTour import circularTour
 from slidingwindow import maxinwindow
+from LargestMultiple import multipleof3
+
 
 def structure_test():
     Q = queue()
@@ -21,6 +23,7 @@ def structure_test():
     print Q.dequeue()
     print Q.front()
 
+
 def Priority_Q_test():
     PQ = PriorityQueue()
     PQ.enqueue(31, 1)
@@ -28,11 +31,10 @@ def Priority_Q_test():
     PQ.enqueue(91, 4)
     PQ.enqueue(51, 3)
     PQ.enqueue(10, 9)
-    PQ.enqueue(1, 1) # handles same priority with FIFO
+    PQ.enqueue(1, 1)  # handles same priority with FIFO
     PQ.enqueue(2, 5)
     PQ.enqueue(13, 6)
 
-
     print PQ.front()
     print PQ.rear()
 
@@ -41,6 +43,7 @@ def Priority_Q_test():
 
     print PQ.front()
     print PQ.rear()
+
 
 def deque_test():
     DQ = deque()
@@ -68,6 +71,7 @@ def deque_test():
     print DQ.front()
     print DQ.rear()
 
+
 def circularTour_problem():
     oil = [4, 6, 7, 4]
     distance = [6, 5, 3, 5]
@@ -79,9 +83,15 @@ def circularTour_problem():
     oil = [6, 3, 7]
     print "start jouney from :", circularTour(distance, oil)
 
+
 def slidingwindow_problem():
     arr = [1, 2, 3, 1, 4, 5, 2]
     maxinwindow(arr, 3)
+
+
+def largestmultiple_problem():
+    arr = [7, 1, 9]
+    multipleof3(arr)
 
 
 if __name__ == "__main__":
@@ -91,5 +101,3 @@ if __name__ == "__main__":
     # circularTour_problem()
     # slidingwindow_problem()
     largestmultiple_problem()
-
-

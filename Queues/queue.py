@@ -1,5 +1,6 @@
 class queue:
     """Queue implementation"""
+
     def __init__(self):
         """default constructor"""
         self.Q = []
@@ -32,6 +33,7 @@ class queue:
 
 class PriorityQueue:
     """Priority Queue implementation"""
+
     def __init__(self):
         """default constructor"""
         self.Q = []
@@ -67,7 +69,7 @@ class PriorityQueue:
         else:
             self.P.append(priority)
             self.Q.append(item)
-    
+
     def isEmpty(self):
         """stack util for checking size"""
         return len(self.Q) == 0
@@ -86,6 +88,7 @@ class PriorityQueue:
         if not self.isEmpty():
             self.P.pop(0)
             return self.Q.pop(0)
+
 
 class deque:
     """double ended queue implementation"""
@@ -125,16 +128,3 @@ class deque:
         """returns rear element"""
         if not self.isEmpty():
             return self.Q[-1]
-
-
-
-
-
-
-
-
-
-
-
-
-

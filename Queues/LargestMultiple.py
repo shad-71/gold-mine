@@ -1,6 +1,7 @@
 # program it to find the largest multiple of 3 from the given array
 from queue import queue
 
+
 def multipleof3(arr):
     sorted(arr)
     q1 = queue()
@@ -8,16 +9,16 @@ def multipleof3(arr):
     q0 = queue()
     _sum = 0
     for i in arr:
-        if i%3 == 0:
+        if i % 3 == 0:
             q0.enqueue(i)
-        if i%3 == 1:
+        if i % 3 == 1:
             q1.enqueue(i)
-        if i%3 == 2:
+        if i % 3 == 2:
             q2.enqueue(i)
         _sum += i
-    if _sum%3 == 0:
+    if _sum % 3 == 0:
         print arr[::-1]
-    if _sum%3 == 1 :
+    if _sum % 3 == 1:
         if not q1.isEmpty():
             q1.dequeue()
         else:
@@ -27,7 +28,7 @@ def multipleof3(arr):
             else:
                 print "number not possible"
         printmuliple(q0, q1, q2)
-    if _sum%3 == 2:
+    if _sum % 3 == 2:
         if not q2.isEmpty():
             q2.dequeue()
         else:
@@ -38,6 +39,7 @@ def multipleof3(arr):
                 print "number is not possible"
         printmuliple(q0, q1, q2)
 
+
 def printmuliple(q0, q1, q2):
     num = []
     while not q0.isEmpty():
@@ -46,11 +48,5 @@ def printmuliple(q0, q1, q2):
         num.append(q1.dequeue())
     while not q2.isEmpty():
         num.append(q2.dequeue())
-    
+
     print sorted(num, reverse=True)
-
-
-
-
-
-
