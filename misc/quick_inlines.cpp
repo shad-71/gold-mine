@@ -1,3 +1,10 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
 
 #define ms(s, n) memset(s, n, sizeof(s))
 #define FOR(i, a, b) for (int i = (a); i < (b); i++)
@@ -42,3 +49,7 @@ inline int sign(ld x, ld y) {return sign(x - y);}
 #define db(x) cerr << #x << " = " << (x) << ", ";
 #define endln cerr << "\n";
 #define chkpt cerr << "-----\n";
+
+int main(){
+    cout<<"inlines";
+}
