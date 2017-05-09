@@ -5,6 +5,7 @@ def binarysearch_test():
     arr = [1, 2, 3, 4, 8, 9]
     print "checking binary search"
     assert_equal(binarysearch(arr, 4),3)
+    print "success"
 
 
 if __name__ == "__main__":
