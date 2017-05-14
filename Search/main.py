@@ -15,6 +15,12 @@ def occurence_count_test():
     assert_equal(occurence_count(arr, 4), 4)
     print "success"
 
+def amazon_prblm():
+    arr = ['a', 'a', 'a', 'b', 'b', 'c', 'd','d', 'd', 'd']
+    item_counts(arr)
+    
+
 if __name__ == "__main__":
     # binarysearch_test()
-    occurence_count_test()
+    # occurence_count_test()
+    amazon_prblm()
