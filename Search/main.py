@@ -16,9 +16,9 @@ def occurence_count_test():
     print "success"
 
 def amazon_prblm():
-    arr = ['a', 'a', 'a', 'b', 'b', 'c', 'd','d', 'd', 'd']
+    arr = ['a', 'a', 'a', 'b', 'b', 'c', 'd', 'd', 'd', 'd']
     item_counts(arr)
-    
+
 
 if __name__ == "__main__":
     # binarysearch_test()
